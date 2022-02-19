@@ -4,13 +4,22 @@ import Button from "./Button"
 
 import '../cssComponents/addTask.css'
 
-const addTask = () => {
-    //const [inputData, setInputData] = useState("")
+const AddTask = ({handleTaskadd}) => {
     
+    const [inputData, setInputData] = useState('')
+
     const handleImputChange = (e) =>  {
-        setInputData(e.target.value)
+       setInputData(e.target.value)
+       
     }  
     
+    const handleAddTaskClick = () => {
+        handleTaskadd(inputData)
+        setInputData('')
+    }
+
+  
+
     return ( 
         <div className="add-task-container">
             <input 
@@ -20,10 +29,10 @@ const addTask = () => {
                 type="text" 
             />
             <div className="add-task-button">
-                <Button> Adicionar</Button>
+                <Button onClick={handleAddTaskClick}> Adicionar</Button>
             </div>
         </div>
      )
 }
  
-export default addTask
+export default AddTask
