@@ -1,3 +1,8 @@
+.container-button{
+    display: flex;
+    gap: 8px;
+}
+
 .task-container{
     background-color: #444;
     margin: 8px 0;
@@ -14,10 +19,12 @@
     cursor: pointer;
 }
 
-.remove-task-button {
+.remove-task-button,
+.task-detalhes-button {
     background-color: #444;
     border: none;
     color: chartreuse;
     font-weight: bold;
     font-size: 24px;
 }
+
